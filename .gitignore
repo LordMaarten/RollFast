@@ -1,5 +1,6 @@
 /build
 /workers/unity/build/
+/Temp
 /logs/
 .spatialos/
 .idea/

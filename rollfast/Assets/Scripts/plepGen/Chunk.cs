@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using World.Generator;
 
 public class Chunk
 {

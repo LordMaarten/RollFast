@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using World.Generator;
+using Mesh = World.Generator.Mesh;
 using Random = System.Random;
 
 public class ChunkController : MonoBehaviour
@@ -96,7 +98,7 @@ public class ChunkController : MonoBehaviour
         //chunk.generateChunk(SimplexNoiseGenerator, new Vector3(x + chunkOffsetX, y + chunkOffsetY, z + chunkOffsetZ), chunkSize, noisePreset);
         //var m = pxg.Generator.Mesh.GenerateMesh((int) chunkSize.x, chunk, noisePreset.tau, SimplexNoiseGenerator);
         var pos = new Vector3((x + chunkOffsetX) * chunkSize.x, (y + chunkOffsetY) * chunkSize.y, (z + chunkOffsetZ) * chunkSize.z);
-        var m = pxg.Generator.Mesh.GenerateMesh((int) chunkSize.x, chunkSize, pos, noisePreset.tau, SimplexNoiseGenerator);
+        var m = Mesh.GenerateMesh((int) chunkSize.x, chunkSize, pos, noisePreset.tau, SimplexNoiseGenerator);
         chunkPos.Add(new Vector3(chunkX, chunkY, chunkZ));
         var go = Instantiate(_chunk, new Vector3(chunkX - (chunkSize.x / 2 * chunksRendered.x), chunkY - (chunkSize.y / 2 * chunksRendered.y), chunkZ - (chunkSize.z / 2 * chunksRendered.z)), Quaternion.identity, gameObject.transform);
         go.GetComponent<MeshCollider>().sharedMesh = m;
