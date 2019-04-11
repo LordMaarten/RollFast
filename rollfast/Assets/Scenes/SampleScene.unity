@@ -804,8 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a63b583be86a23e8b47f92a4cedd2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunksRendered: {x: 4, y: 4, z: 4}
-  chunkSize: {x: 8, y: 8, z: 8}
+  chunksRendered: {x: 3, y: 3, z: 3}
+  chunkSize: {x: 16, y: 16, z: 16}
   noisePreset: {fileID: 11400000, guid: 250365cda52650586b705b10130c7943, type: 2}
   playerTransform: {fileID: 3933308460311573665}
   mat: {fileID: 2100000, guid: 1338165b5227793f7bce9c6162c456ef, type: 2}
