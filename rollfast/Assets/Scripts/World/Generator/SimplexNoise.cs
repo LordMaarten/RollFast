@@ -2,7 +2,7 @@
 
 namespace World.Generator
 {
-    public class SimplexNoiseGenerator
+    public class SimplexNoiseGenerator: INoise
     {
         private int[] A = new int[3];
         private float s, u, v, w;

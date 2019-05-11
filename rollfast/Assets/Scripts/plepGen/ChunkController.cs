@@ -16,7 +16,7 @@ public class ChunkController : MonoBehaviour
     [SerializeField] private GameObject _chunk;
     [SerializeField] private float _colorTimer = 0f;
 
-    private SimplexNoiseGenerator SimplexNoiseGenerator = new SimplexNoiseGenerator();
+    private INoise SimplexNoiseGenerator = new CachedNoise();
 
     private List<Vector3> chunkPos = new List<Vector3>();
     private List<string> colors = new List<string>();

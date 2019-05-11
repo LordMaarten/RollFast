@@ -17,7 +17,7 @@ namespace World.DataStructure
 
         public List<float> Values { get; }
 
-        public static IEnumerable<MarchingCube> GenerateCubes(int res, Vector3 chunkSize, Vector3 chunkPos, SimplexNoiseGenerator generator)
+        public static IEnumerable<MarchingCube> GenerateCubes(int res, Vector3 chunkSize, Vector3 chunkPos, INoise generator)
         {
             var cubes = new List<MarchingCube>();
 
@@ -55,7 +55,7 @@ namespace World.DataStructure
             return cubes;
         }
 
-        public static IEnumerable<MarchingCube> GenerateCubes(int res, Chunk chunk, SimplexNoiseGenerator generator)
+        public static IEnumerable<MarchingCube> GenerateCubes(int res, Chunk chunk, INoise generator)
         {
             var cubes = new List<MarchingCube>();
 
