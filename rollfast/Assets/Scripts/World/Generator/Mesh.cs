@@ -5,7 +5,7 @@ namespace World.Generator
 {
     public static class Mesh
     {
-        public static UnityEngine.Mesh GenerateMesh(int res, Vector3 chunkSize, Vector3 chunkPos, float tau, SimplexNoiseGenerator generator)
+        public static UnityEngine.Mesh GenerateMesh(int res, Vector3 chunkSize, Vector3 chunkPos, float tau, INoise generator)
         {
             var cubes = MarchingCube.GenerateCubes(res, chunkSize, chunkPos, generator);
             var m = new DataStructure.Mesh(cubes, tau);
@@ -15,7 +15,7 @@ namespace World.Generator
             return mesh;
         }
 
-        public static UnityEngine.Mesh GenerateMesh(int res, Chunk chunk, float tau, SimplexNoiseGenerator generator)
+        public static UnityEngine.Mesh GenerateMesh(int res, Chunk chunk, float tau, INoise generator)
         {
             var cubes = MarchingCube.GenerateCubes(res, chunk, generator);
             var m = new DataStructure.Mesh(cubes, tau);
